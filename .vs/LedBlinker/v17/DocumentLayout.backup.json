@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\LedBlinker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\controllers\\ledviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:controllers\\ledviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\models\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:models\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\views\\ledview\\state.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:views\\ledview\\state.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\connected services\\ledblinkerapi\\connectedservice.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:connected services\\ledblinkerapi\\connectedservice.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\connected services\\ledblinkerapi\\ledblinkerapi.nswag||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:connected services\\ledblinkerapi\\ledblinkerapi.nswag||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|h:\\ledblinker\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Led.cs",
+              "DocumentMoniker": "H:\\LedBlinker\\Models\\Led.cs",
+              "RelativeDocumentMoniker": "Models\\Led.cs",
+              "ToolTip": "H:\\LedBlinker\\Models\\Led.cs",
+              "RelativeToolTip": "Models\\Led.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T07:29:34.31Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "H:\\LedBlinker\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "H:\\LedBlinker\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T10:50:29.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LedController.cs",
+              "DocumentMoniker": "H:\\LedBlinker\\Controllers\\LedController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LedController.cs",
+              "ToolTip": "H:\\LedBlinker\\Controllers\\LedController.cs*",
+              "RelativeToolTip": "Controllers\\LedController.cs*",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T07:00:06.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "State.cshtml",
+              "DocumentMoniker": "H:\\LedBlinker\\Views\\LedView\\State.cshtml",
+              "RelativeDocumentMoniker": "Views\\LedView\\State.cshtml",
+              "ToolTip": "H:\\LedBlinker\\Views\\LedView\\State.cshtml",
+              "RelativeToolTip": "Views\\LedView\\State.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-24T10:56:03.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LedViewController.cs",
+              "DocumentMoniker": "H:\\LedBlinker\\Controllers\\LedViewController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LedViewController.cs",
+              "ToolTip": "H:\\LedBlinker\\Controllers\\LedViewController.cs",
+              "RelativeToolTip": "Controllers\\LedViewController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAowH8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T10:43:11.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\LedBlinker\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\LedBlinker\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T10:40:02.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConnectedService.json",
+              "DocumentMoniker": "H:\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "RelativeDocumentMoniker": "Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "ToolTip": "H:\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "RelativeToolTip": "Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-23T07:33:27.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\LedBlinker\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "H:\\LedBlinker\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-11T10:48:06.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "H:\\LedBlinker\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "H:\\LedBlinker\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T10:27:03.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LedBlinkerApi.nswag",
+              "DocumentMoniker": "H:\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "RelativeDocumentMoniker": "Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "ToolTip": "H:\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "RelativeToolTip": "Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-23T07:33:28.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "H:\\LedBlinker\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "H:\\LedBlinker\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-11T10:55:28.87Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

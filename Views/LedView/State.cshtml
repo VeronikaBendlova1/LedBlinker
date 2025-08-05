@@ -1,0 +1,70 @@
+﻿@model LedBlinker.Models.LedStateViewModel
+
+<h2>LED Stav</h2>
+
+<p>Aktuální stav LEDky: <strong>@Model.CurrentState</strong></p>
+
+<form asp-action="State" method="post">
+    <div>
+        <label><input type="radio" asp-for="SelectedState" value="Off" name="SelectedState" /> Off</label>
+    </div>
+    <div>
+        <label><input type="radio" asp-for="SelectedState" value="On" name="SelectedState" /> On</label>
+    </div>
+    <div>
+        <label><input type="radio" asp-for="SelectedState" value="Blinking" name="SelectedState" /> Blinking</label>
+    </div>
+
+    <button type="submit">Změnit stav</button>
+</form>
+
+<table style="border-collapse: collapse; margin-top: 20px; width: auto;">
+    <tr>
+
+        <td style="border: 1px solid #ccc; padding: 8px;font-size: 16px; font-weight: bold">Datum</td>
+        <td style="border: 1px solid #ccc; padding: 8px;font-size: 16px; font-weight: bold">Stav</td>
+    </tr>
+    @if (Model.Logs != null)
+{
+    @foreach (var u in Model.Logs)
+    {
+
+
+        <tr>
+
+            <td style="border: 1px solid #ccc; padding: 4px 8px;">@u.Date.ToString("dd.MM.yyyy HH:mm:ss")</td>
+            <td style="border: 1px solid #ccc; padding: 4px 8px;">@u.State</td>
+        </tr>
+    }
+}
+</table>
+
+
+<form  action="/LedView/DeleteLogs" method="post" style="margin-top: 10px;">
+    <button type="submit" style="background-color: #c00; color: white; padding: 5px 10px; border: none; border-radius: 4px;">
+        Smazat všechny logy
+    </button>
+</form>
+
+<h2>Nastavit frekvenci blikání</h2>
+
+
+<p>Aktuální blikání: <strong>@Model.CurrentBlinkRate</strong></p>
+
+<form asp-action="PostBlinkRate"  method="post">
+    <div>
+        <label for="NewBlinkRate">@Html.AntiForgeryToken() Frekvence blikání (v sekundách):</label>
+        <input asp-for="NewBlinkRate" type="number" step="0.1" min="0.1" max="10" />
+        <span asp-validation-for="NewBlinkRate" style="color:red;"></span>
+    </div>
+
+    <button type="submit" style="margin-top:10px;">Uložit</button>
+</form>
+<p>Debug URL: @Url.Action("PostBlinkRate", "LedView")</p>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
