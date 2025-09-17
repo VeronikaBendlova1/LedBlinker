@@ -1,7 +1,6 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace LedBlinker.Controllers
 {
