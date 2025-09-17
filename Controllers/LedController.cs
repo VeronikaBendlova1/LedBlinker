@@ -1,5 +1,6 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Models;
+using LedBlinker.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LedBlinker.Controllers
@@ -9,40 +10,22 @@ namespace LedBlinker.Controllers
     public class LedController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
+        private readonly ILedStateService _ledStateService;
+
         public LedController(ApplicationDbContext db) => _db = db;
 
         [HttpGet("state")]
-        public IActionResult GetState()
+        public async Task<IActionResult> GetState()
         {
-            if (!_db.Leds.Any())
-            {
-                _db.Leds.Add(new Led { State = LedState.Off });
-                _db.SaveChanges();
-            }
-
-            var stavLedky = _db.Leds.Select(x => x.State).FirstOrDefault();
+            var stavLedky = await _ledStateService.LoadAsync();
             return Ok(stavLedky);
         }
 
         [HttpPost("state")]
         public IActionResult SetState([FromBody] LedStateDto dto)
         {
-            if (!_db.Leds.Any())
-                return NotFound("Žádná LED není vytvořená");
 
-            if (!Enum.IsDefined(typeof(LedState), dto.State))
-                return BadRequest("Zadej on, off nebo blinking");
-
-            var led = _db.Leds.FirstOrDefault();
-            led.State = dto.State;
-
-            _db.Logs.Add(new Logs
-            {
-                Date = DateTime.Now,
-                State = dto.State.ToString()
-            });
-
-            _db.SaveChanges();
+            var led = _ledStateService.SetStateAsync(dto);
             return Ok(led);
         }
 

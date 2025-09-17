@@ -1,5 +1,9 @@
 ﻿using System.Globalization;
 using LedBlinker.Data;
+using LedBlinker.Repository;
+using LedBlinker.Repository.Impl;
+using LedBlinker.Service;
+using LedBlinker.Service.Impl;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -17,7 +21,17 @@ namespace LedBlinker
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
 
+            builder.Services.AddScoped<ILedStateService, LedStateService>();
+            builder.Services.AddScoped<ILedRepo, LedRepo>();
 
+            if (builder.Environment.EnvironmentName == "Custom")
+            {
+                builder.Services.AddScoped<ILogService, LogServiceCustom>();
+            }
+            else
+            {
+                builder.Services.AddScoped<ILogService, LogServiceDefault>();
+            }
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
