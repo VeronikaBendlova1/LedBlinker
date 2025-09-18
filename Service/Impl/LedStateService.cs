@@ -7,9 +7,9 @@ namespace LedBlinker.Service.Impl;
 public class LedStateService : ILedStateService
 {
     private readonly ILedRepo _ledRepo;
-    private readonly ILogService _logService;
+    private readonly ILogServiceDefault _logService;
 
-    public LedStateService(ILogService logService)
+    public LedStateService(ILogServiceDefault logService)
     {
         _logService = logService;
     }

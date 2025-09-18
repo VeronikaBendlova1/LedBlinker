@@ -1,16 +1,21 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Models;
+using LedBlinker.Repository.Impl;
 using LedBlinker.Service;
+using LedBlinker.Service.Impl;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LedBlinker.Controllers
 {
-    [ApiController]
+    [ApiController] ////https://github.com/VeronikaBendlova1/LedBlinker/blob/master/Controllers/LedController.cs
     [Route("api/led")]
     public class LedController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
         private readonly ILedStateService _ledStateService;
+        private readonly ILogServiceDefault _logService;
+        private readonly IConfigurationServiceDefault _configuration;
+       
 
         public LedController(ApplicationDbContext db) => _db = db;
 
@@ -30,55 +35,24 @@ namespace LedBlinker.Controllers
         }
 
         [HttpGet("logs")]
-        public IActionResult GetLogs([FromQuery] DateTime? from, [FromQuery] DateTime? to)
+        public async Task<IActionResult> GetLogsAsync([FromQuery] DateTime? from, [FromQuery] DateTime? to)
         {
-            var logs = _db.Logs.AsQueryable();
-
-            if (from.HasValue)
-                logs = logs.Where(l => l.Date >= from.Value);
-            if (to.HasValue)
-                logs = logs.Where(l => l.Date <= to.Value);
-
-            return Ok(logs.ToList());
+            var logs = await _logService.GetLogsAsync(from, to);
+            return Ok(logs);
         }
 
         [HttpPost("configuration")]
         public IActionResult PostConfiguration([FromBody] ConfigurationDto dto)
         {
-            var led = _db.Leds.FirstOrDefault();
-            if (led == null)
-                return NotFound("Žádná LED není vytvořená");
-
-            if (led.State != LedState.Blinking)
-                return BadRequest("Ledka nebliká, je nutné ji nejdřív přepnout na blikání");
-
-            if (dto.BlinkRate <= 0 || dto.BlinkRate > 10)
-                return BadRequest("BlinkRate musí být větší než 0 a menší než 10");
-
-            var config = _db.Configurations.FirstOrDefault();
-
-            if (config == null)
-            {
-                config = new Configuration
-                {
-                    BlinkRate = dto.BlinkRate,
-                    ConfigurationLed = led
-                };
-                _db.Configurations.Add(config);
-            }
-            else
-            {
-                config.BlinkRate = dto.BlinkRate;
-            }
-
-            _db.SaveChanges();
-            return Ok(config.BlinkRate);
+            var blinkRate = _configuration.PostBlinkRateAsync(dto);
+            
+            return Ok(blinkRate);
         }
 
-        [HttpGet("configuration")]
-        public IActionResult GetConfiguration()
+        [HttpGet("configuration")] 
+        public async Task<IActionResult> GetConfiguration()
         {
-            var config = _db.Configurations.Select(x => new { x.BlinkRate }).FirstOrDefault();
+            var config = await _configuration.GetBlinkRateAsync();
             return Ok(config);
         }
     }

@@ -23,14 +23,17 @@ namespace LedBlinker
 
             builder.Services.AddScoped<ILedStateService, LedStateService>();
             builder.Services.AddScoped<ILedRepo, LedRepo>();
+            builder.Services.AddScoped<ILogRepo, LogRepository>();
+            builder.Services.AddScoped<IConfigurationRepo, ConfigurationRepo>();
+            builder.Services.AddScoped<IConfigurationServiceDefault, ConfigurationServiceDefault>();
 
             if (builder.Environment.EnvironmentName == "Custom")
             {
-                builder.Services.AddScoped<ILogService, LogServiceCustom>();
+                builder.Services.AddScoped<ILogServiceDefault, LogServiceCustom>();
             }
             else
             {
-                builder.Services.AddScoped<ILogService, LogServiceDefault>();
+                builder.Services.AddScoped<ILogServiceDefault, LogServiceDefault>();
             }
 
             // Add services to the container.

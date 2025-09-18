@@ -3,18 +3,20 @@ using LedBlinker.Repository;
 
 namespace LedBlinker.Service.Impl;
 
-public class LogServiceDefault : ILogServiceDefault
+public class LogServiceCustom : ILogServiceDefault
 {
     private readonly ILogRepo _logRepo;
 
-    public LogServiceDefault(ILogRepo logRepo)
+    public LogServiceCustom(ILogRepo logRepo)
     {
         _logRepo = logRepo;
     }
+   
 
-    public async Task AddLogAsync(Logs logs)
+    public Task AddLogAsync(Logs logs)
     {
-        await _logRepo.AddLogAsync(logs);
+        Console.WriteLine("Logging from custom service: " + logs.State);
+        return Task.CompletedTask;
     }
 
     public async Task<List<Logs>> GetLogsAsync(DateTime? from, DateTime? to)

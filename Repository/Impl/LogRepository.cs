@@ -1,5 +1,8 @@
-﻿using LedBlinker.Data;
+﻿using System.Collections.Immutable;
+using FluentResults;
+using LedBlinker.Data;
 using LedBlinker.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LedBlinker.Repository.Impl
 {
@@ -25,8 +28,16 @@ namespace LedBlinker.Repository.Impl
             var result = _db.Logs.Add(log);
             await _db.SaveChangesAsync();
 
-            return result.Entity;
+            return result.Entity; // vrátí přidaný log
             
         }
+
+        public async Task<List<Logs>> GetAllLogsAsync()
+        {
+            return await _db.Logs.ToListAsync();
+
+        }
+
+        
     }
 }

@@ -15,12 +15,12 @@ public class LedRepo : ILedRepo
         _db = db;
     }
 
-    public Task<Led?> LoadAny()
+    public Task<Led?> LoadAny() // naète led
     {
-        return _db.Leds.AsNoTracking().FirstOrDefaultAsync();
+        return _db.Leds.AsNoTracking().FirstOrDefaultAsync(); // vrací ledku _db.Leds.FirstOrDefault();
     }
 
-    public async Task<Led> SetupNew()
+    public async Task<Led> SetupNew() // vytvoøí novou ledku a vrátí ji
     {
 
         var defaultConfig = new Led()
