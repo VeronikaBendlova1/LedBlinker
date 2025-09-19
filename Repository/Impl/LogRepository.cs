@@ -38,6 +38,12 @@ namespace LedBlinker.Repository.Impl
 
         }
 
-        
+        public async Task<List<Logs>> GetLogsInDateSpanAsync(DateTime from, DateTime to)
+        {
+            return await _db.Logs
+                .Where(log => log.Date >= from && log.Date <= to)
+                .OrderBy(log => log.Date)
+                .ToListAsync();
+        }
     }
 }

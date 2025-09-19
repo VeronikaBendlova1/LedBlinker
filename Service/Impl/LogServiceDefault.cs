@@ -30,4 +30,11 @@ public class LogServiceDefault : ILogServiceDefault
         //vrací hotový seznam
         return logs;
     }
+    public async Task<List<Logs>> LoadLogsInDateSpanAsync(DateTime from, DateTime to)
+    {
+        if (from > to)
+            throw new ArgumentException("Zadejte prosím platné rozmení od - do");
+
+        return await _logRepo.GetLogsInDateSpanAsync(from, to);
+    }
 }

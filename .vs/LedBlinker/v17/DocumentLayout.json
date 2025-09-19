@@ -1,90 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\LedBlinker\\",
+  "WorkspaceRootPath": "G:\\LedBlinkerSolution\\LedBlinker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\impl\\configurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\configurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\impl\\configurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\configurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\impl\\iconfigurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\iconfigurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\impl\\iconfigurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\iconfigurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\iledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\iledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\ilogrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\ilogrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\ilogservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\ilogservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\iledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\iledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\impl\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\repository\\impl\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\logrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\repository\\impl\\ledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\ledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\repository\\ilogrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\ilogrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\impl\\ledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\ledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\impl\\logservicecustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\logservicecustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\service\\impl\\logservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\impl\\logservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\logservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:controllers\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\ilogservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\ilogservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\repository\\impl\\ledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\ledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\repository\\iledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\iledrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\impl\\ledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\ledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\iledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\iledstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\impl\\configurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\configurationservicedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\repository\\impl\\configurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:repository\\impl\\configurationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\service\\impl\\logservicecustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:service\\impl\\logservicecustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\connected services\\ledblinkerapi\\connectedservice.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\connected services\\ledblinkerapi\\connectedservice.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:connected services\\ledblinkerapi\\connectedservice.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\connected services\\ledblinkerapi\\ledblinkerapi.nswag||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\connected services\\ledblinkerapi\\ledblinkerapi.nswag||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:connected services\\ledblinkerapi\\ledblinkerapi.nswag||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinker\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|g:\\ledblinkersolution\\ledblinker\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}|LedBlinker.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\LedBlinker\\Service\\Impl\\IConfigurationServiceDefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,17 +92,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LedController.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Controllers\\LedController.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Controllers\\LedController.cs",
               "RelativeDocumentMoniker": "Controllers\\LedController.cs",
-              "ToolTip": "G:\\LedBlinker\\Controllers\\LedController.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Controllers\\LedController.cs",
               "RelativeToolTip": "Controllers\\LedController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswCgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T07:00:06.194Z",
               "IsPinned": true,
@@ -116,23 +114,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IConfigurationRepo.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
-              "RelativeDocumentMoniker": "Repository\\Impl\\IConfigurationRepo.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
-              "RelativeToolTip": "Repository\\Impl\\IConfigurationRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ILogRepo.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\ILogRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\ILogRepo.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\ILogRepo.cs",
+              "RelativeToolTip": "Repository\\ILogRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T18:48:48.614Z"
+              "WhenOpened": "2025-09-17T17:12:21.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogServiceDefault.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LogServiceDefault.cs",
+              "RelativeDocumentMoniker": "Service\\Impl\\LogServiceDefault.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LogServiceDefault.cs",
+              "RelativeToolTip": "Service\\Impl\\LogServiceDefault.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T17:23:05.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogRepository.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\LogRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Impl\\LogRepository.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\LogRepository.cs",
+              "RelativeToolTip": "Repository\\Impl\\LogRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwCoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T16:03:44.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILogServiceDefault.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\ILogServiceDefault.cs",
+              "RelativeDocumentMoniker": "Service\\ILogServiceDefault.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\ILogServiceDefault.cs",
+              "RelativeToolTip": "Service\\ILogServiceDefault.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T17:11:49.134Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "LedRepo.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\LedRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\Impl\\LedRepo.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\LedRepo.cs",
+              "RelativeToolTip": "Repository\\Impl\\LedRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T16:03:10.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ILedRepo.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\ILedRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\ILedRepo.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\ILedRepo.cs",
+              "RelativeToolTip": "Repository\\ILedRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T16:50:53.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LedStateService.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LedStateService.cs",
+              "RelativeDocumentMoniker": "Service\\Impl\\LedStateService.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LedStateService.cs",
+              "RelativeToolTip": "Service\\Impl\\LedStateService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T16:21:04.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ILedStateService.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\ILedStateService.cs",
+              "RelativeDocumentMoniker": "Service\\ILedStateService.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\ILedStateService.cs",
+              "RelativeToolTip": "Service\\ILedStateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T17:01:17.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Program.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "G:\\LedBlinker\\Program.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAQwBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -140,47 +230,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ILedRepo.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\ILedRepo.cs",
-              "RelativeDocumentMoniker": "Repository\\ILedRepo.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\ILedRepo.cs",
-              "RelativeToolTip": "Repository\\ILedRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "IConfigurationRepo.cs",
+              "DocumentMoniker": "G:\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
+              "RelativeDocumentMoniker": "..\\..\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
+              "ToolTip": "G:\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
+              "RelativeToolTip": "..\\..\\LedBlinker\\Repository\\Impl\\IConfigurationRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:50:53.879Z"
+              "WhenOpened": "2025-09-17T18:48:48.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ILogRepo.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\ILogRepo.cs",
-              "RelativeDocumentMoniker": "Repository\\ILogRepo.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\ILogRepo.cs",
-              "RelativeToolTip": "Repository\\ILogRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T17:12:21.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 20,
               "Title": "IConfigurationServiceDefault.cs",
               "DocumentMoniker": "G:\\LedBlinker\\Service\\Impl\\IConfigurationServiceDefault.cs",
-              "RelativeDocumentMoniker": "Service\\Impl\\IConfigurationServiceDefault.cs",
+              "RelativeDocumentMoniker": "..\\..\\LedBlinker\\Service\\Impl\\IConfigurationServiceDefault.cs",
               "ToolTip": "G:\\LedBlinker\\Service\\Impl\\IConfigurationServiceDefault.cs",
-              "RelativeToolTip": "Service\\Impl\\IConfigurationServiceDefault.cs",
+              "RelativeToolTip": "..\\..\\LedBlinker\\Service\\Impl\\IConfigurationServiceDefault.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T19:00:11.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ConfigurationRepo.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\Impl\\ConfigurationRepo.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\ConfigurationRepo.cs",
               "RelativeDocumentMoniker": "Repository\\Impl\\ConfigurationRepo.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\Impl\\ConfigurationRepo.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Repository\\Impl\\ConfigurationRepo.cs",
               "RelativeToolTip": "Repository\\Impl\\ConfigurationRepo.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -188,11 +266,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "ConfigurationServiceDefault.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\Impl\\ConfigurationServiceDefault.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\ConfigurationServiceDefault.cs",
               "RelativeDocumentMoniker": "Service\\Impl\\ConfigurationServiceDefault.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\Impl\\ConfigurationServiceDefault.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\ConfigurationServiceDefault.cs",
               "RelativeToolTip": "Service\\Impl\\ConfigurationServiceDefault.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAcwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -200,71 +278,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ILogServiceDefault.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\ILogServiceDefault.cs",
-              "RelativeDocumentMoniker": "Service\\ILogServiceDefault.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\ILogServiceDefault.cs",
-              "RelativeToolTip": "Service\\ILogServiceDefault.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T17:11:49.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ILedStateService.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\ILedStateService.cs",
-              "RelativeDocumentMoniker": "Service\\ILedStateService.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\ILedStateService.cs",
-              "RelativeToolTip": "Service\\ILedStateService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T17:01:17.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LogRepository.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\Impl\\LogRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Impl\\LogRepository.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\Impl\\LogRepository.cs",
-              "RelativeToolTip": "Repository\\Impl\\LogRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:03:44.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LedRepo.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Repository\\Impl\\LedRepo.cs",
-              "RelativeDocumentMoniker": "Repository\\Impl\\LedRepo.cs",
-              "ToolTip": "G:\\LedBlinker\\Repository\\Impl\\LedRepo.cs",
-              "RelativeToolTip": "Repository\\Impl\\LedRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:03:10.375Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "LedStateService.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\Impl\\LedStateService.cs",
-              "RelativeDocumentMoniker": "Service\\Impl\\LedStateService.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\Impl\\LedStateService.cs",
-              "RelativeToolTip": "Service\\Impl\\LedStateService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T16:21:04.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "LogServiceCustom.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\Impl\\LogServiceCustom.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LogServiceCustom.cs",
               "RelativeDocumentMoniker": "Service\\Impl\\LogServiceCustom.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\Impl\\LogServiceCustom.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Service\\Impl\\LogServiceCustom.cs",
               "RelativeToolTip": "Service\\Impl\\LogServiceCustom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -272,23 +290,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LogServiceDefault.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Service\\Impl\\LogServiceDefault.cs",
-              "RelativeDocumentMoniker": "Service\\Impl\\LogServiceDefault.cs",
-              "ToolTip": "G:\\LedBlinker\\Service\\Impl\\LogServiceDefault.cs",
-              "RelativeToolTip": "Service\\Impl\\LogServiceDefault.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T17:23:05.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "G:\\LedBlinker\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "G:\\LedBlinker\\Views\\_ViewImports.cshtml",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -296,11 +302,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "ConnectedService.json",
-              "DocumentMoniker": "G:\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
               "RelativeDocumentMoniker": "Connected Services\\LedBlinkerApi\\ConnectedService.json",
-              "ToolTip": "G:\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Connected Services\\LedBlinkerApi\\ConnectedService.json",
               "RelativeToolTip": "Connected Services\\LedBlinkerApi\\ConnectedService.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -308,11 +314,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\LedBlinker\\appsettings.json",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "G:\\LedBlinker\\appsettings.json",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -320,11 +326,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "G:\\LedBlinker\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "G:\\LedBlinker\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -332,11 +338,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "LedBlinkerApi.nswag",
-              "DocumentMoniker": "G:\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
               "RelativeDocumentMoniker": "Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
-              "ToolTip": "G:\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
               "RelativeToolTip": "Connected Services\\LedBlinkerApi\\LedBlinkerApi.nswag",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -344,11 +350,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "G:\\LedBlinker\\appsettings.Development.json",
+              "DocumentMoniker": "G:\\LedBlinkerSolution\\LedBlinker\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "G:\\LedBlinker\\appsettings.Development.json",
+              "ToolTip": "G:\\LedBlinkerSolution\\LedBlinker\\appsettings.Development.json",
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

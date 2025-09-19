@@ -41,6 +41,17 @@ namespace LedBlinker.Controllers
             return Ok(logs);
         }
 
+        // new version 
+        [HttpGet("logs")]
+        public async Task<IActionResult> GetLogsAsyncWithBetterFilter([FromQuery] DateTime? from, [FromQuery] DateTime? to)
+        {
+            if (from == null || to == null)
+                return BadRequest("Musíte zadat oba parametry: from i to.");
+
+            var logs = await _logService.LoadLogsInDateSpanAsync(from.Value, to.Value);
+            return Ok(logs);
+        }
+
         [HttpPost("configuration")]
         public IActionResult PostConfiguration([FromBody] ConfigurationDto dto)
         {
