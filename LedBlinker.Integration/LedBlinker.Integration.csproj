@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LedBlinker\LedBlinker.csproj" />
+    <ProjectReference Include="..\LedBlinker.LedToolkit\LedBlinker.LedToolkit.csproj" />
   </ItemGroup>
 
 </Project>
