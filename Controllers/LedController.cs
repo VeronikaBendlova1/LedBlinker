@@ -1,102 +1,69 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Models;
+using LedBlinker.Repository.Impl;
+using LedBlinker.Service;
+using LedBlinker.Service.Impl;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace LedBlinker.Controllers
 {
-    [ApiController]
+    [ApiController] ////https://github.com/VeronikaBendlova1/LedBlinker/blob/master/Controllers/LedController.cs
     [Route("api/led")]
     public class LedController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
+        private readonly ILedStateService _ledStateService;
+        private readonly ILogServiceDefault _logService;
+        private readonly IConfigurationServiceDefault _configuration;
+       
+
         public LedController(ApplicationDbContext db) => _db = db;
 
         [HttpGet("state")]
-        public IActionResult GetState()
+        public async Task<IActionResult> GetState()
         {
-            if (!_db.Leds.Any())
-            {
-                _db.Leds.Add(new Led { State = LedState.Off });
-                _db.SaveChanges();
-            }
-
-            var stavLedky = _db.Leds.Select(x => x.State).FirstOrDefault();
+            var stavLedky = await _ledStateService.LoadAsync();
             return Ok(stavLedky);
         }
 
         [HttpPost("state")]
         public IActionResult SetState([FromBody] LedStateDto dto)
         {
-            if (!_db.Leds.Any())
-                return NotFound("Žádná LED není vytvořená");
 
-            if (!Enum.IsDefined(typeof(LedState), dto.State))
-                return BadRequest("Zadej on, off nebo blinking");
-
-            var led = _db.Leds.FirstOrDefault();
-            led.State = dto.State;
-
-            _db.Logs.Add(new Logs
-            {
-                Date = DateTime.Now,
-                State = dto.State.ToString()
-            });
-
-            _db.SaveChanges();
+            var led = _ledStateService.SetStateAsync(dto);
             return Ok(led);
         }
 
         [HttpGet("logs")]
-        public IActionResult GetLogs([FromQuery] DateTime? from, [FromQuery] DateTime? to)
+        public async Task<IActionResult> GetLogsAsync([FromQuery] DateTime? from, [FromQuery] DateTime? to)
         {
-            var logs = _db.Logs.AsQueryable();
+            var logs = await _logService.GetLogsAsync(from, to);
+            return Ok(logs);
+        }
 
-            if (from.HasValue)
-                logs = logs.Where(l => l.Date >= from.Value);
-            if (to.HasValue)
-                logs = logs.Where(l => l.Date <= to.Value);
+        // new version 
+        [HttpGet("logs")]
+        public async Task<IActionResult> GetLogsAsyncWithBetterFilter([FromQuery] DateTime? from, [FromQuery] DateTime? to)
+        {
+            if (from == null || to == null)
+                return BadRequest("Musíte zadat oba parametry: from i to.");
 
-            return Ok(logs.ToList());
+            var logs = await _logService.LoadLogsInDateSpanAsync(from.Value, to.Value);
+            return Ok(logs);
         }
 
         [HttpPost("configuration")]
         public IActionResult PostConfiguration([FromBody] ConfigurationDto dto)
         {
-            var led = _db.Leds.FirstOrDefault();
-            if (led == null)
-                return NotFound("Žádná LED není vytvořená");
-
-            if (led.State != LedState.Blinking)
-                return BadRequest("Ledka nebliká, je nutné ji nejdřív přepnout na blikání");
-
-            if (dto.BlinkRate <= 0 || dto.BlinkRate > 10)
-                return BadRequest("BlinkRate musí být větší než 0 a menší než 10");
-
-            var config = _db.Configurations.FirstOrDefault();
-
-            if (config == null)
-            {
-                config = new Configuration
-                {
-                    BlinkRate = dto.BlinkRate,
-                    ConfigurationLed = led
-                };
-                _db.Configurations.Add(config);
-            }
-            else
-            {
-                config.BlinkRate = dto.BlinkRate;
-            }
-
-            _db.SaveChanges();
-            return Ok(config.BlinkRate);
+            var blinkRate = _configuration.PostBlinkRateAsync(dto);
+            
+            return Ok(blinkRate);
         }
 
-        [HttpGet("configuration")]
-        public IActionResult GetConfiguration()
+        [HttpGet("configuration")] 
+        public async Task<IActionResult> GetConfiguration()
         {
-            var config = _db.Configurations.Select(x => new { x.BlinkRate }).FirstOrDefault();
+            var config = await _configuration.GetBlinkRateAsync();
             return Ok(config);
         }
     }
