@@ -1,6 +1,5 @@
 ﻿
 using FluentResults;
-using Humanizer;
 using LedBlinker.Models;
 using LedBlinker.Repository;
 using LedBlinker.Repository.Impl;
@@ -9,29 +8,26 @@ namespace LedBlinker.Service.Impl
 {
     public class ConfigurationServiceDefault : IConfigurationServiceDefault
     {
-        private readonly ConfigurationRepo configutationRepo;
-        private readonly LedRepo _ledRepo;
-        private readonly ConfigurationRepo _configurationRepo;
+        private readonly ILedRepo _ledRepo;
+        private readonly IConfigurationRepo _configurationRepo;
 
 
 
-        public ConfigurationServiceDefault(ConfigurationRepo configutationRepo, LedRepo ledRepo, ConfigurationRepo configurationRepo)
+        public ConfigurationServiceDefault(
+            IConfigurationRepo configRepo,
+            ILedRepo ledRepo)
 
         {
-            this.configutationRepo = configutationRepo;
             _ledRepo = ledRepo;
-            _configurationRepo = configurationRepo;
+            _configurationRepo = configRepo;
         }
 
         public async Task<float?> GetBlinkRateAsync()
         {
-            var configuration = await configutationRepo.LoadConfiguration();
+            var configuration = await _configurationRepo.LoadConfiguration();
 
             return configuration?.BlinkRate;
         }
-
-
-
 
 
         public async Task<Result<float>> PostBlinkRateAsync(ConfigurationDto dto)

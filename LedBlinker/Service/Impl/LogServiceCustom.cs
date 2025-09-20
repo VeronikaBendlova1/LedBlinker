@@ -11,7 +11,7 @@ public class LogServiceCustom : ILogServiceDefault
     {
         _logRepo = logRepo;
     }
-   
+
 
     public Task AddLogAsync(Logs logs)
     {
@@ -31,5 +31,10 @@ public class LogServiceCustom : ILogServiceDefault
 
         //vrací hotový seznam
         return logs;
+    }
+
+    public Task<List<Logs>> LoadLogsInDateSpanAsync(DateTime from, DateTime to)
+    {
+        throw new NotImplementedException();
     }
 }

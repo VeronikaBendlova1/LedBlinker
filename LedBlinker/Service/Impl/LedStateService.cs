@@ -9,13 +9,11 @@ public class LedStateService : ILedStateService
     private readonly ILedRepo _ledRepo;
     private readonly ILogServiceDefault _logService;
 
-    public LedStateService(ILogServiceDefault logService)
+    public LedStateService(
+        ILogServiceDefault logService,
+        ILedRepo ledRepo)
     {
         _logService = logService;
-    }
-
-    public LedStateService(ILedRepo ledRepo)
-    {
         _ledRepo = ledRepo;
     }
 

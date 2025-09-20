@@ -15,9 +15,21 @@ namespace LedBlinker.Controllers
         private readonly ILedStateService _ledStateService;
         private readonly ILogServiceDefault _logService;
         private readonly IConfigurationServiceDefault _configuration;
-       
 
-        public LedController(ApplicationDbContext db) => _db = db;
+
+
+        public LedController(
+            ILedStateService ledStateService,
+            ApplicationDbContext db,
+            IConfigurationServiceDefault configuration,
+            ILogServiceDefault logService)
+        {
+            _ledStateService = ledStateService;
+            _db = db;
+            _configuration = configuration;
+            _logService = logService;
+        }
+
 
         [HttpGet("state")]
         public async Task<IActionResult> GetState()
@@ -56,11 +68,11 @@ namespace LedBlinker.Controllers
         public IActionResult PostConfiguration([FromBody] ConfigurationDto dto)
         {
             var blinkRate = _configuration.PostBlinkRateAsync(dto);
-            
+
             return Ok(blinkRate);
         }
 
-        [HttpGet("configuration")] 
+        [HttpGet("configuration")]
         public async Task<IActionResult> GetConfiguration()
         {
             var config = await _configuration.GetBlinkRateAsync();

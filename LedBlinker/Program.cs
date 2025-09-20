@@ -35,7 +35,6 @@ namespace LedBlinker
             {
                 builder.Services.AddScoped<ILogServiceDefault, LogServiceDefault>();
             }
-
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -51,7 +50,6 @@ namespace LedBlinker
                     Version = "v1"
                 });
             });
-
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
