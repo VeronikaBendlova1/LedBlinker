@@ -16,12 +16,13 @@ public class LedBlinkerFactory : WebApplicationFactory<Program>
 
         builder.ConfigureServices(services =>
         {
+            //Remove dependencies of project database, and use inMemory database for testing
             services.RemoveAll<DbContext>();
             services.RemoveAll<DbContextOptions<ApplicationDbContext>>();
             services.RemoveAll<IDbContextOptions>();
             services.RemoveAll<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("test db"));
+                options.UseInMemoryDatabase("test db"));  //Use in memory db
         });
         base.ConfigureWebHost(builder);
 

@@ -49,6 +49,7 @@ public class GetStateTests
     [Test]
     public async Task LoadLedState_Always()
     {
+        //create Led record in database
         Led dbLed;
         using (var scope = _factory.Services.CreateScope())
         {
@@ -70,14 +71,8 @@ public class GetStateTests
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             IncludeFields = true,
         });
-
-        using (var scope = _factory.Services.CreateScope())
-        {
-            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            var dbRecord = db.Leds.FirstOrDefault();
-            Assert.That(dbRecord, Is.Not.Null);
-            Assert.That(dbRecord.Id, Is.EqualTo(resultObject.Id));
-        }
+        //Validate that exising record is returned instead of creating new one
+        Assert.That(dbLed.Id, Is.EqualTo(resultObject.Id));
     }
 
 }
