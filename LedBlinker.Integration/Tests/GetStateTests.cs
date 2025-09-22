@@ -5,6 +5,7 @@ using LedBlinker.LedToolkit.Tools;
 using LedBlinker.LedToolkit.Tools.Impl;
 using LedBlinker.Models;
 using Microsoft.Extensions.DependencyInjection;
+using Mono.TextTemplating;
 
 namespace LedBlinker.Integration.Tests;
 
@@ -32,9 +33,9 @@ public class GetStateTests
     }
 
     [Test]
-    public async Task LoadLedState_WhenDatabaseIsEmpty_Always()
+    public async Task LoadLedState_WhenDatabaseIsEmpty_Always() //DB je prázdná ? API vytvoøí nový záznam“
     {
-        var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
+       var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
         Assert.That(resultResponse.IsSuccessStatusCode);
         var resultMessage = await resultResponse.Content.ReadAsStringAsync();
         var resultObject = JsonSerializer.Deserialize<Led>(resultMessage, new JsonSerializerOptions()
@@ -43,34 +44,64 @@ public class GetStateTests
             IncludeFields = true,
         });
 
+        var result = await _stateTool.LoadState();
+
         using var scope = _factory.Services.CreateScope();
-        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-        var dbRecord = db.Leds.FirstOrDefault();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>(); //scope – izolovaný kontejner pro lifetime scoped služby. //Ze scope mùžeš vytáhnout služby
+        var dbRecord = db.Leds.FirstOrDefault(); 
         Assert.That(dbRecord, Is.Not.Null);
         Assert.That(dbRecord.Id, Is.EqualTo(resultObject.Id));
     }
 
     [Test]
-    public async Task LoadLedState_Always()
+    public async Task LoadLedState_Always() //ovìøuje scénáø „DB už nìco má ? API vrátí existující záznam“.
     {
         //create Led record in database
         Led dbLed;
-        using (var scope = _factory.Services.CreateScope())
+        using (var scope = _factory.Services.CreateScope()) //Takto se v testech dostanu do databáze a mùžu ji kontrolovat.
         {
-            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>(); //Takto se v testech dostanu do databáze a mùžu ji kontrolovat.
             var req = db.Leds.Add(new()
             {
                 Id = 5,
                 State = LedState.On
             });
             db.SaveChanges();
+            dbLed = req.Entity; // req.Entity = reference na právì uložený objekt, po SaveChanges() s vyplnìnými hodnotami, protože db.Leds.Add(...) vrací EntityEntry<Led>
+        }
+
+        var result = await _stateTool.LoadState();  //Use toolkit for request toolkit udìlá HTTP GET na /api/led/state a vrátí Led.
+
+        //Validate that exising record is returned instead of creating new one
+        Assert.That(dbLed.Id, Is.EqualTo(result.Id)); // ovìøení, že api nevrátilo nìco nového ID z databáze = ID z api
+        
+    }
+    [Test]
+    public async Task LoadLedState_WhenLedIsBlinking_ReturnBlinking() //validace hodnot(State musí  Blinking),
+    {
+        Led dbLed;
+        using (var scope = _factory.Services.CreateScope()) 
+        {
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            var req =db.Leds.Add(new Led
+            {
+                Id = 1,
+                State = LedState.Blinking
+            }
+            );
+            db.SaveChanges();
             dbLed = req.Entity;
         }
 
-        var result = await _stateTool.LoadState();  //Use toolkit for request
+        var result = await _stateTool.LoadState(); // vrací stav co si založilo API
 
-        //Validate that exising record is returned instead of creating new one
-        Assert.That(dbLed.Id, Is.EqualTo(result.Id));
+        Assert.That(dbLed.State, Is.EqualTo(LedState.Blinking));
+        Assert.That(result.Id, Is.EqualTo(1));
+
+
+
+
+
     }
 
 }

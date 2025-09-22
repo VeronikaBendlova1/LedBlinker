@@ -6,4 +6,6 @@ public interface IStateTool
 {
 
     public Task<Led> LoadState();
+
+    public Task<Led> SetStateAsync(LedStateDto dto);
 }
