@@ -5,7 +5,6 @@ using LedBlinker.LedToolkit.Tools;
 using LedBlinker.LedToolkit.Tools.Impl;
 using LedBlinker.Models;
 using Microsoft.Extensions.DependencyInjection;
-using Mono.TextTemplating;
 
 namespace LedBlinker.Integration.Tests;
 
@@ -35,7 +34,7 @@ public class GetStateTests
     [Test]
     public async Task LoadLedState_WhenDatabaseIsEmpty_Always() //DB je prázdná ? API vytvoøí nový záznam“
     {
-       var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
+        var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
         Assert.That(resultResponse.IsSuccessStatusCode);
         var resultMessage = await resultResponse.Content.ReadAsStringAsync();
         var resultObject = JsonSerializer.Deserialize<Led>(resultMessage, new JsonSerializerOptions()
@@ -48,7 +47,7 @@ public class GetStateTests
 
         using var scope = _factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>(); //scope – izolovaný kontejner pro lifetime scoped služby. //Ze scope mùžeš vytáhnout služby
-        var dbRecord = db.Leds.FirstOrDefault(); 
+        var dbRecord = db.Leds.FirstOrDefault();
         Assert.That(dbRecord, Is.Not.Null);
         Assert.That(dbRecord.Id, Is.EqualTo(resultObject.Id));
     }
@@ -74,16 +73,16 @@ public class GetStateTests
 
         //Validate that exising record is returned instead of creating new one
         Assert.That(dbLed.Id, Is.EqualTo(result.Id)); // ovìøení, že api nevrátilo nìco nového ID z databáze = ID z api
-        
+
     }
     [Test]
     public async Task LoadLedState_WhenLedIsBlinking_ReturnBlinking() //validace hodnot(State musí  Blinking),
     {
         Led dbLed;
-        using (var scope = _factory.Services.CreateScope()) 
+        using (var scope = _factory.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            var req =db.Leds.Add(new Led
+            var req = db.Leds.Add(new Led
             {
                 Id = 1,
                 State = LedState.Blinking
