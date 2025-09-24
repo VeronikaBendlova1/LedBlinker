@@ -22,7 +22,7 @@ public class LedBlinkerFactory : WebApplicationFactory<Program>
             services.RemoveAll<IDbContextOptions>();
             services.RemoveAll<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("TestDb"));  //Use in memory db
+                options.UseInMemoryDatabase("test db"));  //Use in memory db
         });
         base.ConfigureWebHost(builder);
 

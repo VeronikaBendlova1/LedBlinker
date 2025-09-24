@@ -2,14 +2,7 @@
 using LedBlinker.Integration.Utils;
 using LedBlinker.LedToolkit.Tools.Impl;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
-using LedBlinker.LedToolkit.Models;
-using System.Net;
 
 
 namespace LedBlinker.Integration.Tests
@@ -34,6 +27,15 @@ namespace LedBlinker.Integration.Tests
         [TearDown]
         public void Clean()
         {
+            using var scope = _factory.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+            // kompletně vymaže databázi i identity counter
+            db.Database.EnsureDeleted();
+
+            // znovu ji vytvoří (tabulky, schéma atd.)
+            db.Database.EnsureCreated();
+
             _factory.Dispose();
             _client.Dispose();
         }
@@ -42,9 +44,19 @@ namespace LedBlinker.Integration.Tests
         public async Task GetLogs_ReturnsBlinkRate()
         {
             //arrange
-            var scope = _factory.Services.CreateScope() ;
-            var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
-            
+            using var scope = _factory.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+            db.Configurations.Add(new Models.Configuration
+                
+                        { 
+                            BlinkRate = 9, 
+                            ConfigurationLed = new() 
+
+                        });
+            db.SaveChanges();
+
+
             //act
             var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/configuration"));
             resultResponse.EnsureSuccessStatusCode();
@@ -64,7 +76,9 @@ namespace LedBlinker.Integration.Tests
             //assert
             Assert.That(dbRecord, Is.Not.Null);
             Assert.That(db.Configurations.Count(), Is.EqualTo(1));
-            Assert.That(dbRecord.BlinkRate, Is.EqualTo(9));
+            Assert.That(dbRecord.BlinkRate, Is.EqualTo(9)); //test DB - ověřuju přímo obsah databáze po uložení (tedy že SaveChanges() proběhlo a v DB je opravdu BlinkRate = 9)
+            Assert.That(blinkRateObject, Is.EqualTo(9)); //test API - je hodnota, kterou mi vrátilo API po serializaci a deserializaci.
+
         }
     }
 }

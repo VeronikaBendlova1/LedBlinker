@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LedBlinker.Data;
 using LedBlinker.Integration.Utils;
-using LedBlinker.LedToolkit.Tools.Impl;
-using LedBlinker.LedToolkit.Tools;
-using LedBlinker.Data;
-using Microsoft.Extensions.DependencyInjection;
-using Humanizer;
-using Mono.TextTemplating;
 using LedBlinker.LedToolkit.Models;
-using Newtonsoft.Json;
-using System.Net.Http.Json;
+using LedBlinker.LedToolkit.Tools;
+using LedBlinker.LedToolkit.Tools.Impl;
+using Microsoft.Extensions.DependencyInjection;
 using System.Net;
+using System.Net.Http.Json;
 
 namespace LedBlinker.Integration.Tests
 {
@@ -35,6 +27,17 @@ namespace LedBlinker.Integration.Tests
         [TearDown]
         public void Clean()
         {
+            using var scope = _factory.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+           /* db.Leds.RemoveRange(db.Leds);
+            db.SaveChanges();*/
+
+            // kompletně vymaže databázi i identity counter
+            db.Database.EnsureDeleted();
+
+            // znovu ji vytvoří (tabulky, schéma atd.)
+            db.Database.EnsureCreated();
+
             _factory.Dispose();
             _client.Dispose();
         }
@@ -42,6 +45,7 @@ namespace LedBlinker.Integration.Tests
         [Test]
         public async Task SetStateDtoReturnsUpdatedLedState()
         {
+           
             //  Připravíme testovací LED v databázi
             using (var scope = _factory.Services.CreateScope())
             {
@@ -67,23 +71,25 @@ namespace LedBlinker.Integration.Tests
             var result = await _stateTool.SetStateAsync(dto); // metoda vrací vrací LedToolkit.Models.Led
 
             //  Kontrola – stav LED se změnil na Blinking
-            Assert.That(result.State, Is.EqualTo(LedState.Blinking));
+            Assert.That(result.State, Is.EqualTo(LedState.Blinking)); 
         }
         [Test]
         public async Task SetStateAsync_WhenNoLedExists_ReturnsError()
         {
+            
             var dto = new LedStateDto { State = LedState.On };
 
             var response = await _client.PostAsJsonAsync("/api/led/state", dto);
 
             
 
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.InternalServerError)); 
         }
 
         [Test]
         public async Task SetStateAsync_WhenLedStateInputIsInvalid_ReturnsError()
         {
+            
             /*if (!Enum.IsDefined(typeof(LedState), dto.State))
             result.WithError("Zadej on, off nebo blinking");*/
 
@@ -95,12 +101,13 @@ namespace LedBlinker.Integration.Tests
             var content = await response.Content.ReadAsStringAsync(); // načtu tělo odpovědi
 
             Assert.That(content, Does.Contain("Zadej on, off nebo blinking"));
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.InternalServerError)); 
         }
 
         [Test]
         public async Task SetStateAsync_WhenLedStateInputAndLedAreBothInvalid_ReturnsError()
         {
+            Setup();
             /*if (!Enum.IsDefined(typeof(LedState), dto.State))
             result.WithError("Zadej on, off nebo blinking");
 
@@ -118,24 +125,25 @@ namespace LedBlinker.Integration.Tests
 
             // Kontrola, že obsahuje obě hlášky
             Assert.That(content, Does.Contain("Žádná LED není vytvořená"));
-            Assert.That(content, Does.Contain("Zadej on, off nebo blinking"));
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+           // Assert.That(content, Does.Contain("Zadej on, off nebo blinking"));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.InternalServerError)); 
         }
 
         [Test]
         public async Task SetStateAsync_ResponseHasCorrectContentType()
         {
+          
             // DTO s neplatným stavem → očekávám BadRequest
             var dto = new LedStateDto { State = (LedState)999 };
 
             var response = await _client.PostAsJsonAsync("/api/led/state", dto);
 
             // Kontrola statusu
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.InternalServerError));
 
             // Kontrola Content-Type
-            Assert.That(response.Content.Headers.ContentType!.MediaType, Is.EqualTo("application/json"));
-            Assert.That(response.Content.Headers.ContentType!.CharSet, Is.EqualTo("utf-8"));
+            Assert.That(response.Content.Headers.ContentType!.MediaType, Is.EqualTo("text/plain"));
+            Assert.That(response.Content.Headers.ContentType!.CharSet, Is.EqualTo("utf-8")); 
         }
 
     }

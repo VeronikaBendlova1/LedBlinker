@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LedBlinker.LedToolkit.Models;
 
 namespace LedBlinker.LedToolkit.Tools.Impl
 {
     public  interface IConfigurationStateTool
     {
         public Task<float?> LoadConfigurationState();
+        public Task<float?> SetConfigurationStateAsync(ConfigurationDto dto);
     }
 }

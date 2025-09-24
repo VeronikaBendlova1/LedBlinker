@@ -1,17 +1,9 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Integration.Utils;
 using LedBlinker.LedToolkit.Tools.Impl;
-using LedBlinker.LedToolkit.Tools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LedBlinker.LedToolkit.Models;
 using Microsoft.Extensions.DependencyInjection;
-using LedBlinker.Models;
-using Logs = LedBlinker.Models.Logs;
 using System.Text.Json;
+using Logs = LedBlinker.Models.Logs;
 
 namespace LedBlinker.Integration.Tests
 {
@@ -34,6 +26,12 @@ namespace LedBlinker.Integration.Tests
         [TearDown]
         public void Clean()
         {
+            using var scope = _factory.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+         
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+
             _factory.Dispose();
             _client.Dispose();
         }
@@ -67,7 +65,7 @@ namespace LedBlinker.Integration.Tests
             var to = new DateTime(2025, 2, 20);
 
             // Act – volám přímo API přes HttpClient
-            var url = $"/api/led/logs?from={from:O}&to={to:O}";
+            var url = $"/api/led/logswithbetterfilter?from={from:O}&to={to:O}"; // volám logswithbetterfilter - metoda GetLogsAsyncWithBetterFilter
             var response = await _client.GetAsync(url);
 
             response.EnsureSuccessStatusCode();

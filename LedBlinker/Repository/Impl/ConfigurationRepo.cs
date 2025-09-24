@@ -31,6 +31,8 @@ namespace LedBlinker.Repository.Impl
 
         public async Task<Configuration?> AddNewConfigurationAsync(ConfigurationDto dto, Led led)
         {
+            _db.Leds.Attach(led);
+            await _db.SaveChangesAsync();
             var newConfig = new Configuration()
             {
                 BlinkRate = dto.BlinkRate,

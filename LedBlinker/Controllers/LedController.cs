@@ -1,6 +1,5 @@
 ﻿using LedBlinker.Data;
 using LedBlinker.Models;
-using LedBlinker.Repository.Impl;
 using LedBlinker.Service;
 using LedBlinker.Service.Impl;
 using Microsoft.AspNetCore.Mvc;
@@ -39,11 +38,11 @@ namespace LedBlinker.Controllers
         }
 
         [HttpPost("state")]
-        public IActionResult SetState([FromBody] LedStateDto dto)
+        public async Task<IActionResult> SetState([FromBody] LedStateDto dto)
         {
 
-            var led = _ledStateService.SetStateAsync(dto);
-            return Ok(led);
+            var led = await _ledStateService.SetStateAsync(dto);
+            return Ok(led.Value); //vracím skutečnou ledku bez obalu Result<Led>
         }
 
         [HttpGet("logs")]
@@ -54,7 +53,7 @@ namespace LedBlinker.Controllers
         }
 
         // new version 
-        [HttpGet("logs")]
+        [HttpGet("logswithbetterfilter")]
         public async Task<IActionResult> GetLogsAsyncWithBetterFilter([FromQuery] DateTime? from, [FromQuery] DateTime? to)
         {
             if (from == null || to == null)
@@ -65,11 +64,11 @@ namespace LedBlinker.Controllers
         }
 
         [HttpPost("configuration")]
-        public IActionResult PostConfiguration([FromBody] ConfigurationDto dto)
+        public async Task<IActionResult> PostConfiguration([FromBody] ConfigurationDto dto)
         {
-            var blinkRate = _configuration.PostBlinkRateAsync(dto);
+            var blinkRate = await _configuration.PostBlinkRateAsync(dto);
 
-            return Ok(blinkRate);
+            return Ok(blinkRate.Value);
         }
 
         [HttpGet("configuration")]

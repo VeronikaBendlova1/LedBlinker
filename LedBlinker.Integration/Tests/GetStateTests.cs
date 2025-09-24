@@ -16,7 +16,7 @@ public class GetStateTests
     private IStateTool _stateTool;
 
     //Runs before each test
-    [SetUp]
+    [SetUp] // Framework(NUnit) to volá automaticky pøed a po každém testu
     public void Setup()
     {
         _factory = new LedBlinkerFactory();
@@ -24,17 +24,34 @@ public class GetStateTests
         _stateTool = new LedStateTool(_client);
     }
 
-    [TearDown]
+    [TearDown] // Framework(NUnit) to volá automaticky pøed a po každém testu
     public void Clean()
     {
+        using var scope = _factory.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        /*db.Leds.RemoveRange(db.Leds);
+        db.Configurations.RemoveRange(db.Configurations);
+        db.SaveChanges(); toto smaže jen tabulky, ale nezresetuje celý InMemory context*/
+
+        // kompletnì vymaže databázi i identity counter - èítaè ID Každý test teï zaène s prázdnou databází, Id od 1.
+        db.Database.EnsureDeleted();
+
+        // znovu ji vytvoøí (tabulky, schéma atd.)
+        db.Database.EnsureCreated();
+
         _factory.Dispose();
         _client.Dispose();
     }
-
+    
     [Test]
     public async Task LoadLedState_WhenDatabaseIsEmpty_Always() //DB je prázdná ? API vytvoøí nový záznam“
     {
-        var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
+
+        
+
+        
+       var resultResponse = await _client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/api/led/state")); //Use standard http request
+
         Assert.That(resultResponse.IsSuccessStatusCode);
         var resultMessage = await resultResponse.Content.ReadAsStringAsync();
         var resultObject = JsonSerializer.Deserialize<Led>(resultMessage, new JsonSerializerOptions()
@@ -50,6 +67,7 @@ public class GetStateTests
         var dbRecord = db.Leds.FirstOrDefault();
         Assert.That(dbRecord, Is.Not.Null);
         Assert.That(dbRecord.Id, Is.EqualTo(resultObject.Id));
+        
     }
 
     [Test]
@@ -62,7 +80,7 @@ public class GetStateTests
             var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>(); //Takto se v testech dostanu do databáze a mùžu ji kontrolovat.
             var req = db.Leds.Add(new()
             {
-                Id = 5,
+                // Id = 5, -> ? Pak se ID vytvoøí automaticky od 1
                 State = LedState.On
             });
             db.SaveChanges();
@@ -96,7 +114,6 @@ public class GetStateTests
 
         Assert.That(dbLed.State, Is.EqualTo(LedState.Blinking));
         Assert.That(result.Id, Is.EqualTo(1));
-
 
 
 
