@@ -8,7 +8,7 @@ namespace LedBlinker.Models
         public int Id { get; set; }
         public LedState State { get; set; }
     }
-
+    //Test branch edit
     public enum LedState
     {
         Off,
@@ -32,7 +32,7 @@ namespace LedBlinker.Models
 
         public Led ConfigurationLed { get; set; } //NV
 
-      
+
     }
 
     // ✅ DTO pro změnu stavu LED
