@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedBlinker", "LedBlinker\LedBlinker.csproj", "{EAF7E7A9-29C6-4E6C-B1A2-F7F4837D7021}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedBlinker.Integration", "LedBlinker.Integration\LedBlinker.Integration.csproj", "{837663D3-DFC4-493F-AB7E-F69DF00C3BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedBlinker.LedToolkit", "LedBlinker.LedToolkit\LedBlinker.LedToolkit.csproj", "{564247BF-A0B2-565A-FE95-421C2394DB7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD61D02A-0CFC-4A8D-90B8-73EA62B9CA6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EAF7E7A9-29C6-4E6C-B1A2-F7F4837D7021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAF7E7A9-29C6-4E6C-B1A2-F7F4837D7021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAF7E7A9-29C6-4E6C-B1A2-F7F4837D7021}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,6 +23,10 @@ Global
 		{837663D3-DFC4-493F-AB7E-F69DF00C3BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837663D3-DFC4-493F-AB7E-F69DF00C3BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837663D3-DFC4-493F-AB7E-F69DF00C3BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564247BF-A0B2-565A-FE95-421C2394DB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564247BF-A0B2-565A-FE95-421C2394DB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564247BF-A0B2-565A-FE95-421C2394DB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564247BF-A0B2-565A-FE95-421C2394DB7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

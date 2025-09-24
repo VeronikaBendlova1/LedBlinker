@@ -44,6 +44,8 @@ namespace LedBlinker.Repository.Impl
                 .Where(log => log.Date >= from && log.Date <= to)
                 .OrderBy(log => log.Date)
                 .ToListAsync();
+
+            //Klíč: filtr musí být nad IQueryable<Logs> z EF, ne nad List<Logs>, jinak se načtou všechny záznamy do paměti.
         }
     }
 }
